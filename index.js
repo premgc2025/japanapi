@@ -76,7 +76,7 @@ app.get('/building/:id', async (req, res) => {
 
 // POST Building Data
 
-app.post('/building',verifyToken, async (req, res) => {
+app.post('/building', async (req, res) => {
 
     const buildingInfo = req.body;
    
@@ -99,7 +99,7 @@ app.post('/building',verifyToken, async (req, res) => {
 
 // Update Building Data
 
-app.put('/building/:id',verifyToken, async (req, res) => {
+app.put('/building/:id', async (req, res) => {
     const id = req.params.id
     const buildingIfo = req.body
     try {
