@@ -13,7 +13,7 @@ const buildingModel = require('../Model/Building')
 
 
 // Delete Building data
-router.delete('/building/:buildingid', verifyToken, async (req, res) => {
+router.delete('/building/:buildingid', async (req, res) => {
 
   const { buildingid } = req.params;
   try {
@@ -95,7 +95,7 @@ router.post('/room', verifyToken, async (req, res) => {
 
 // Update Room Data
 
-router.put('/room/:id', verifyToken, async (req, res) => {
+router.put('/room/:id',  async (req, res) => {
   const id = req.params.id
   const roomInfo = req.body
 
@@ -125,7 +125,7 @@ router.put('/room/:id', verifyToken, async (req, res) => {
 })
 
 // Delete Room data
-router.delete('/room/:buildingid/:roomid', verifyToken, async (req, res) => {
+router.delete('/room/:buildingid/:roomid', async (req, res) => {
 
   const { buildingid, roomid } = req.params;
   try {
@@ -210,7 +210,7 @@ router.post('/gateway', verifyToken, async (req, res) => {
 })
 
 // Delete Gateway data
-router.delete('/gateway/:buildingid/:roomid/:gatewayid', verifyToken, async (req, res) => {
+router.delete('/gateway/:buildingid/:roomid/:gatewayid', async (req, res) => {
 
   const { buildingid, roomid, gatewayid } = req.params;
   try {
@@ -248,7 +248,7 @@ router.delete('/gateway/:buildingid/:roomid/:gatewayid', verifyToken, async (req
 
 // Update Gateway Data
 
-router.put('/gateway/:id', verifyToken, async (req, res) => {
+router.put('/gateway/:id',  async (req, res) => {
   const id = req.params.id
   const gatewayInfo = req.body
 
@@ -296,7 +296,7 @@ router.get('/booth', async (req, res) => {
 
 // POST Booth Data
 
-router.post('/booth', verifyToken, async (req, res) => {
+router.post('/booth', async (req, res) => {
 
   const boothInfo = req.body;
 
@@ -332,7 +332,7 @@ router.post('/booth', verifyToken, async (req, res) => {
 
 // Update Booth Data
 
-router.put('/booth/:id', verifyToken, async (req, res) => {
+router.put('/booth/:id', async (req, res) => {
   const id = req.params.id
   const boothInfo = req.body
 
@@ -365,7 +365,7 @@ router.put('/booth/:id', verifyToken, async (req, res) => {
 
 
 // Delete Booth data
-router.delete('/booth/:buildingid/:roomid/:gatewayid/:boothid', verifyToken, async (req, res) => {
+router.delete('/booth/:buildingid/:roomid/:gatewayid/:boothid', async (req, res) => {
 
   const { buildingid, roomid, gatewayid, boothid } = req.params;
 
